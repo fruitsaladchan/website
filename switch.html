@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jailbreak Nintendo Switch</title>
+    <link rel="stylesheet" type="text/css" href="mywebsite_files/style.css">
+    <link rel="icon" href="mywebsite_files/1473031501_lain.gif">
+    <style>
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .right {
+            flex: 1;
+            text-align: center; /* Added to center align the links */
+        }
+
+        .right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .right ul li {
+            margin-bottom: 5px;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <section>  
+        <h1>Learn How to Jailbreak a Nintendo Switch</h1>
+        </section>
+    </header>
+   
+    <main>
+         <section>
+            <h2>disclamer</h2>
+            <li>Nintendo is taking no chances with the Nintendo Switch. Permanent console bans can and often do happen. This guide will take many precautions to avoid getting banned, but this site assumes no responsibility if your system is banned.<p>
+            <li>There is always a chance that your Nintendo Switch will brick. This is very rare, and often recoverable on fusee-gelee vulnerable Switches. For unpatched Switches, extra precautions will be taken to avoid bricking as much as possible.<p>
+            <li>Due to the level of access these exploits provide, malicious homebrew exists. These can brick your Switch or otherwise render your Switch inoperable. You should only ever run homebrew from trusted sources.<p>
+
+         </section>
+
+        <section>
+            <h2>What is Homebrew?</h2>
+            <p>Homebrew is a term used to describe software not authorized by Nintendo. This includes custom firmwares, tools, applications, games, emulators, etc.</p>
+        </section>
+        <section>
+            <h2>What is Custom Firmware (CFW)?</h2>
+            <p>Custom Firmware (CFW) gives homebrew more access to the system than standard userland homebrew most commonly available on most systems.</p>
+            <p>Currently, all Nintendo Switches sold before July 2018 can run custom firmware. Switches sold after this point may only be exploitable if they are on firmware 4.1.0. This guide will include checking if your system is vulnerable.</p>
+        </section>
+        <section>
+            <h2>How to Tell Which Switch You Have</h2>
+            <p>Determining which model of Switch you have is essential. If you purchased your Switch before August 2018, it's likely an unpatched model that can be jailbroken. For those purchased after 2018, it is unlikely but can check <a href="https://ismyswitchpatched.com/" >here.</a> You can find the serial number either on the sticker on the bottom of the Switch or by navigating to Settings > System > Serial Information</a>.</p>
+        </section>
+        <section>
+            <h2>What you will need</h2>
+
+<article>
+<li>A device capable of sending a payload, such as a Windows, Linux, or MacOS device.</p> 
+<li>A USB Type C to A/Micro USB/USB Type C cable/adapter. Some kind of cable to connect your Switch to your payload sender (Windows, Linux, MacOS device). </p>
+<li>micro sd card. its reccomened to atleast get a 64gb however i am using a 512gb card and am able to have around 40 games downloaded</p>
+<li>A method to ground pin 10 on the right joycon rail. While various methods exist, using an RCM jig is recommended, which can be purchased for around $10 on Amazon. This method avoids the need for soldering, 3D printing, or tearing down the Switch.
+
+<h2>what to do </h2>
+
+<p>once you have everything the first thind to do is format the micro sd card.Your SD card should be formatted to FAT32. Using exFAT on the Switch should be avoided, since the exFAT drivers on the switch are prone to corruption. It can also prevent certain homebrew/cfw from booting, which is another reason why it shouldn’t be used.<p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#1d1d1d;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><li>Download the gui tool http://ridgecrop.co.uk/index.htm?guiformat.htm
+
+<li>Once downloaded, open the .exe and give it administrative permissions. After that, change the drive to your micro SD’s drive. It’ll most likely be D, E, H, I, or something similar. be sure youve selected the right drive as thiss will completly remove all data from the drive.</li>
+<li>Once the drive is selected, keep the allocation unit size on either 32768 or 65536, give your SD a label, keep Quick Format <strong>CHECKED</strong> and close file explorer.</li>
+<li>if on linux you can use gparted. Once installed find your SD Card in the top right drop down box (will most likely be something like /dev/sdb or /dev/sdc). once on the drive right click the partition, Select Format to and then fat32. After you’ve done that, click the green checkmark at the top of the window to apply the changes </li>
+
+</code></pre></div><p>Next</p>
