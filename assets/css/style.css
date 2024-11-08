@@ -4,14 +4,14 @@
 :root {
   --bg-color-dark: #19171a;
   --box-color-dark: #201e21;
-  --text-color-dark: #ffffff;
+  --text-color-dark: #d8dee9;
 
   --bg-color-light: #f5f5f5;
   --box-color-light: #e4e6e6;
-  --text-color-light: #000000;
+  --text-color-light: #3a3a3a;
 
-  --box-shadow-dark: rgba(0, 0, 0, 0.2);
-  --box-shadow-light: rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: rgba(0, 0, 0, 0.35);
+  --box-shadow-light: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -26,6 +26,18 @@ body {
   transition:
     background-color 0.5s,
     color 0.5s;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.home-icon img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .theme-toggle {
@@ -70,23 +82,23 @@ h1 {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 20px;
-  justify-content: center;
   margin: 20px;
+  max-width: 70%;
 }
 
 .box {
-  width: 200px;
-  height: 200px;
   background-color: var(--box-color-dark);
   border-radius: 15px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 600;
+  text-align: center;
   color: var(--text-color-dark);
   box-shadow: 0 8px 15px var(--box-shadow-dark);
   transition:
@@ -101,6 +113,54 @@ h1 {
   box-shadow: 0 15px 30px var(--box-shadow-dark);
 }
 
+.box h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.box p {
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.box2 {
+  grid-column: 3 / 7;
+  grid-row: 1 / 2;
+}
+
+.box3 {
+  grid-column: 3 / 5;
+  grid-row: 2 / 5;
+}
+
+.box4 {
+  grid-column: 5 / 7;
+  grid-row: 2 / 3;
+}
+
+.box5 {
+  grid-column: 5 / 7;
+  grid-row: 3 / 11;
+}
+
+.box6 {
+  grid-column: 5 / 7;
+  grid-row: 3 / 11;
+}
+
+.box7 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+}
+
+/* Light Mode Styles */
 .light-mode {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
@@ -112,10 +172,14 @@ h1 {
 
 .light-mode .box {
   background-color: var(--box-color-light);
-  box-shadow: 0 8px 15px var(--box-shadow-light);
   color: var(--text-color-light);
+  box-shadow: 0 8px 15px var(--box-shadow-light);
 }
 
 .light-mode .box:hover {
   box-shadow: 0 15px 30px var(--box-shadow-light);
+}
+
+.light-mode a {
+  color: var(--text-color-light);
 }
